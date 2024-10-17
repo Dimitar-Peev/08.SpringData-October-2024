@@ -22,12 +22,16 @@ public class _06_removeVillain {
         }
 
         String villainName = resultSet.getString("name");
-        System.out.println(villainName + " was deleted");
 
         preparedStatement = connection.prepareStatement("DELETE FROM minions_villains WHERE villain_id = ?");
         preparedStatement.setInt(1, villainId);
-
         int deletedCount = preparedStatement.executeUpdate();
+
+        preparedStatement = connection.prepareStatement("DELETE FROM villains WHERE id = ?");
+        preparedStatement.setInt(1, villainId);
+        preparedStatement.executeUpdate();
+
+        System.out.println(villainName + " was deleted");
         System.out.println(deletedCount + " minions released");
 
         connection.close();
