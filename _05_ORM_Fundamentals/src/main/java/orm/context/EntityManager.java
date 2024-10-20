@@ -85,7 +85,7 @@ public class EntityManager<E> implements DbContext<E> {
         return result;
     }
 
-    // FIXME: Qutes around column names
+    // FIXME: Quotes around column names
     private List<String> findEntityColumns(E entity) {
         return Arrays
                 .stream(entity.getClass().getDeclaredFields())
