@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class _06_AddingNewAddressAndUpdatingEmployee {
     public static void main(String[] args) {
-        EntityManager entityManager = HibernateUtil.createEntityManager();
+        EntityManager entityManager = JPA_Util.createEntityManager();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the last name: ");

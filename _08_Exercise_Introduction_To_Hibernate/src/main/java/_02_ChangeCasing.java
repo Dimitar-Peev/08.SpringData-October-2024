@@ -4,7 +4,7 @@ import java.util.List;
 
 public class _02_ChangeCasing {
     public static void main(String[] args) {
-        EntityManager entityManager = HibernateUtil.createEntityManager();
+        EntityManager entityManager = JPA_Util.createEntityManager();
 
         entityManager.getTransaction().begin();
 

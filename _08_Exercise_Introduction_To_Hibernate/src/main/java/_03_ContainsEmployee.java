@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class _03_ContainsEmployee {
     public static void main(String[] args) {
-        EntityManager entityManager = HibernateUtil.createEntityManager();
+        EntityManager entityManager = JPA_Util.createEntityManager();
 
         System.out.println("Enter employee name: ");
         Scanner scanner = new Scanner(System.in);

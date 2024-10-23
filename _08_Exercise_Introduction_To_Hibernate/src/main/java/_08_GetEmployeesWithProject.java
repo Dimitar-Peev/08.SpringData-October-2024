@@ -7,7 +7,7 @@ public class _08_GetEmployeesWithProject {
         System.out.println("Enter employee id:");
         Integer employeeId = new Scanner(System.in).nextInt();
 
-        HibernateUtil.createEntityManager()
+        JPA_Util.createEntityManager()
                 .createQuery("FROM Employee WHERE id = :employeeId", Employee.class)
                 .setParameter("employeeId", employeeId)
                 .getSingleResult()
