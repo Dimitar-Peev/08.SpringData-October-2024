@@ -29,10 +29,10 @@ public class Customer {
 
     // ONE customer -> MANY sales
     @OneToMany(mappedBy = "customer", targetEntity = Sale.class)
-    private Set<Sale> orders;
+    private Set<Sale> sales;
 
     public Customer() {
-        this.orders = new HashSet<>();
+        this.sales = new HashSet<>();
     }
 
     public int getId() {
@@ -67,11 +67,11 @@ public class Customer {
         this.creditCardNumber = creditCardNumber;
     }
 
-    public Set<Sale> getOrders() {
-        return orders;
+    public Set<Sale> getSales() {
+        return sales;
     }
 
-    public void setOrders(Set<Sale> orders) {
-        this.orders = orders;
+    public void setSales(Set<Sale> sales) {
+        this.sales = sales;
     }
 }
