@@ -1,4 +1,4 @@
-package entities.sales;
+package entities._02_SalesDatabase;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
