@@ -1,4 +1,4 @@
-package entities.university;
+package entities._03_UniversitySystem;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
