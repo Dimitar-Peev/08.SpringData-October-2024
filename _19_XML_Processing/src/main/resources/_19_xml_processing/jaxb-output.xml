@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+    <names firstName="Dimitar" lastName="Peev"/>
+    <age>20</age>
+    <address>
+        <country>BG</country>
+        <city>Burgas</city>
+    </address>
+    <phoneNumbers>
+        <singlePhone>
+            <number>0889858687</number>
+        </singlePhone>
+        <singlePhone>
+            <number>0888181818</number>
+        </singlePhone>
+    </phoneNumbers>
+</person>
