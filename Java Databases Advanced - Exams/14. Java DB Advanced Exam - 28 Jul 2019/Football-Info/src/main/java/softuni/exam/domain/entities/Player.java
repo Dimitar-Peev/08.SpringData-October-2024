@@ -30,11 +30,9 @@ public class Player extends BaseEntity {
     @Column(nullable = false)
     private Position position;
 
-    // One Player may have only one Picture, and one Picture may have many Players.
     @ManyToOne
     private Picture picture;
 
-    // One Team may have many Players, and one Player may be appointed to only one Team.
     @ManyToOne(cascade = CascadeType.ALL)
     private Team team;
 }
