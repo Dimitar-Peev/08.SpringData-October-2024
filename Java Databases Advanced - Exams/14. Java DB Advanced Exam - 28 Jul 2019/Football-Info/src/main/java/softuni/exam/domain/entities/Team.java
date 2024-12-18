@@ -15,7 +15,6 @@ public class Team extends BaseEntity {
     @Column(name = "name", nullable = false)
     private String name;
 
-    // One Team may have only one Picture, and one Picture may have many Teams.
     @ManyToOne(cascade = CascadeType.ALL)
     private Picture picture;
 }
