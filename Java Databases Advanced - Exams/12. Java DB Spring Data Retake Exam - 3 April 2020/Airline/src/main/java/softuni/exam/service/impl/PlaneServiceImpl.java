@@ -52,9 +52,9 @@ public class PlaneServiceImpl implements PlaneService {
         planeSeedRootDto
                 .getPlanes()
                 .stream()
-                .filter(sellerSeedDto -> {
-                    boolean isValid = this.validationUtil.isValid(sellerSeedDto);
-                    output.append(isValid ? String.format("Successfully imported Plane %s", sellerSeedDto.getRegisterNumber())
+                .filter(planeSeedDto -> {
+                    boolean isValid = this.validationUtil.isValid(planeSeedDto);
+                    output.append(isValid ? String.format("Successfully imported Plane %s", planeSeedDto.getRegisterNumber())
                                     : "Invalid Plane")
                             .append(System.lineSeparator());
                     return isValid;
