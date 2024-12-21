@@ -6,7 +6,13 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @XmlRootElement(name = "plane")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PlaneSeedDto {
@@ -22,29 +28,4 @@ public class PlaneSeedDto {
     @XmlElement
     @Size(min = 2)
     private String airline;
-
-    public @Size(min = 5) String getRegisterNumber() {
-        return this.registerNumber;
-    }
-
-    public void setRegisterNumber(@Size(min = 5) String registerNumber) {
-        this.registerNumber = registerNumber;
-    }
-
-    @Positive
-    public int getCapacity() {
-        return this.capacity;
-    }
-
-    public void setCapacity(@Positive int capacity) {
-        this.capacity = capacity;
-    }
-
-    public @Size(min = 2) String getAirline() {
-        return this.airline;
-    }
-
-    public void setAirline(@Size(min = 2) String airline) {
-        this.airline = airline;
-    }
 }
