@@ -32,6 +32,17 @@ public class Passenger extends BaseEntity {
     @ManyToOne
     private Town town;
 
-    @OneToMany(mappedBy = "passenger", targetEntity = Ticket.class)
+    @OneToMany(mappedBy = "passenger", targetEntity = Ticket.class, fetch = FetchType.EAGER)
     private List<Ticket> tickets;
+
+    @Override
+    public String toString() {
+        return String.format("""
+                Passenger %s  %s
+                	\tEmail - %s
+                    \tPhone - %s
+                	\tNumber of tickets - %s%n
+                """,
+                this.firstName, this.lastName, this.email, this.phoneNumber, getTickets().size());
+    }
 }
