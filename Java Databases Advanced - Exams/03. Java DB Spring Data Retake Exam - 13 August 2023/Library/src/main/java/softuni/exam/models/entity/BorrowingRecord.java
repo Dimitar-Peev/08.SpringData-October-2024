@@ -33,12 +33,10 @@ public class BorrowingRecord extends BaseEntity {
 
     @Override
     public String toString() {
-        return String.format("""
-                        Book title: %s
-                        *Book author: %s
-                        **Date borrowed: %s
-                        ***Borrowed by: %s %s
-                        """,
+        return String.format("Book title: %s%n" +
+                        "*Book author: %s%n" +
+                        "**Date borrowed: %s%n" +
+                        "***Borrowed by: %s %s%n",
                 getBook().getTitle(), getBook().getAuthor(), getBorrowDate(),
                 getMember().getFirstName(), getMember().getLastName());
     }
