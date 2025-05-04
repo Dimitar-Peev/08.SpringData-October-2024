@@ -1,0 +1,23 @@
+package softuni.exam.util.impl;
+
+import org.springframework.stereotype.Component;
+import softuni.exam.util.XmlParser;
+
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+@Component
+public class XmlParserImpl implements XmlParser {
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public <T> T convertFromFile(String filePath, Class<T> clazz) throws JAXBException, FileNotFoundException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(clazz);
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller(); 
+		FileReader fileReader = new FileReader(filePath);
+        return (T) unmarshaller.unmarshal(fileReader);
+    }
+}
