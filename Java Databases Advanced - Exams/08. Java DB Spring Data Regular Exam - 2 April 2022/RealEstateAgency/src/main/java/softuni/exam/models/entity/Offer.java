@@ -39,9 +39,9 @@ public class Offer extends BaseEntity {
         DecimalFormat df = new DecimalFormat("####.00", DecimalFormatSymbols.getInstance(locale));
         return String.format("""
                             Agent %s %s with offer №%d
-                            -Apartment area: %s
-                            --Town: %s
-                            ---Price: %s$
+                               -Apartment area: %s
+                               --Town: %s
+                               ---Price: %s$
                             """,
                 this.agent.getFirstName(), this.agent.getLastName(), this.getId(),
                 df.format(this.getApartment().getArea()),
